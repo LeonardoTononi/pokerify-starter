@@ -1,22 +1,20 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 import Layout from "../layout/layout"
 import SEO from "../components/seo"
+import { rhythm } from "../utils/typography"
 
-const NotFoundPage = ({ data, location }) => {
+const Index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
-
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
-      <h1>Not Found</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <h1>Index</h1>
     </Layout>
   )
 }
 
-export default NotFoundPage
+export default Index
 
 export const pageQuery = graphql`
   query {

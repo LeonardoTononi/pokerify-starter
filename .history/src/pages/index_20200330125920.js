@@ -6,8 +6,7 @@ import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
 const Index = ({ data, location }) => {
-  const siteTitle = data.site.siteMetadata.title
-
+  console.log("LOCATION", location)
   return (
     <Layout location={location} title={siteTitle}>
       <h1>Index</h1>
@@ -16,13 +15,3 @@ const Index = ({ data, location }) => {
 }
 
 export default Index
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

@@ -5,7 +5,7 @@ import Layout from "../layout/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-const Index = ({ data, location }) => {
+const index = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -22,6 +22,21 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
       }
     }
   }
