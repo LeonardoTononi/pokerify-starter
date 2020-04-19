@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../layout/layout"
-import SEO from "../components/seo"
+import SEO from "../components/Seo/seo"
 import { rhythm, scale } from "../utils/typography"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
