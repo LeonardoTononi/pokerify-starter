@@ -24,5 +24,19 @@ export const pageQuery = graphql`
 				title
 			}
 		}
+		allStrapiArticle {
+			edges {
+				node {
+					strapiId
+					title
+					category {
+						name
+					}
+					image {
+						publicURL
+					}
+				}
+			}
+		}
 	}
 `;
